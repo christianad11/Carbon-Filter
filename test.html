@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Filter Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .test-section h2 {
+            margin-top: 0;
+            color: #495057;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        .test-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .test-label {
+            font-weight: bold;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+        
+        .test-content {
+            font-size: 16px;
+            color: #212529;
+        }
+        
+        .instructions {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #0c5460;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .debug-section {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .debug-section h3 {
+            margin-top: 0;
+            color: #721c24;
+        }
+        
+        .debug-info {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-line;
+            margin-top: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌿 Carbon Filter Test Page</h1>
+    
+    <div class="instructions">
+        <h3>How to Test the Extension:</h3>
+        <ol>
+            <li>Make sure the Carbon Filter extension is installed and enabled in Chrome</li>
+            <li>Click the extension icon in the toolbar to open the popup</li>
+            <li>Make sure "Privacy Protection" is turned ON</li>
+            <li>Check/uncheck different field types to test individual masking</li>
+            <li>Add custom text in the "Custom Text to Hide" section</li>
+            <li>Refresh this page to see the masking effects</li>
+            <li>Hover over masked text to see the original content</li>
+        </ol>
+    </div>
+
+
+    <div class="test-section">
+        <h2>📧 Email Addresses</h2>
+        <div class="test-item">
+            <div class="test-label">Standard Email:</div>
+            <div class="test-content">Contact us at john.doe@example.com for support</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Multiple Emails:</div>
+            <div class="test-content">Send to admin@company.com and support@company.com</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Email in Sentence:</div>
+            <div class="test-content">My email is jane.smith@business.org, please contact me there.</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📱 Phone Numbers</h2>
+        <div class="test-item">
+            <div class="test-label">US Format:</div>
+            <div class="test-content">Call us at (555) 123-4567 for assistance</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Different Formats:</div>
+            <div class="test-content">Phone: 555-123-4567 or 555.123.4567 or 555 123 4567</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">With Country Code:</div>
+            <div class="test-content">International: +1-555-123-4567</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>💳 Credit Card Numbers</h2>
+        <div class="test-item">
+            <div class="test-label">Visa Format:</div>
+            <div class="test-content">Card number: 4532 1234 5678 9012</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Mastercard Format:</div>
+            <div class="test-content">Credit card: 5555 1234 5678 9012</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Different Spacing:</div>
+            <div class="test-content">Payment: 4532123456789012 or 4532-1234-5678-9012</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔐 Social Security Numbers</h2>
+        <div class="test-item">
+            <div class="test-label">Standard SSN:</div>
+            <div class="test-content">SSN: 123-45-6789</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">Without Dashes:</div>
+            <div class="test-content">Social Security: 123456789</div>
+        </div>
+        <div class="test-item">
+            <div class="test-label">In Context:</div>
+            <div class="test-content">Employee ID: 987-65-4321, please keep this confidential.</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>✏️ Custom Text Testing</h2>
+        <div class="highlight">
+            <strong>Instructions:</strong> Add custom text in the extension popup, then refresh this page to see it masked below.
+        </div>
+        <div class="test-item">
+            <div class="test-label">Sample Custom Text:</div>
+            <div class="test-content">
+                <p>This is a sample paragraph with some text that you can add as custom text to test the masking functionality.</p>
+                <p>Try adding "sample paragraph" or "custom text" to the extension's custom text list.</p>
+                <p>You can also test with names like "John Smith" or company names like "Acme Corporation".</p>
+                <p>Test with specific words like "confidential" or "private information".</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔄 Dynamic Content Testing</h2>
+        <div class="test-item">
+            <div class="test-label">Dynamic Content:</div>
+            <div class="test-content">
+                <p>This section tests dynamic content loading. Click the button below to add new content with sensitive information.</p>
+                <button onclick="addDynamicContent()">Add Dynamic Content</button>
+                <div id="dynamicContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📊 Test Results</h2>
+        <div class="test-item">
+            <div class="test-label">What to Look For:</div>
+            <div class="test-content">
+                <ul>
+                    <li>✅ Sensitive information should be masked with colored bars</li>
+                    <li>✅ Hovering over masked text should reveal the original content</li>
+                    <li>✅ Different data types should have different colored masks</li>
+                    <li>✅ Custom text should be masked with gray bars</li>
+                    <li>✅ Toggling field types should show/hide specific data types</li>
+                    <li>✅ Dynamic content should be masked when added</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addDynamicContent() {
+            const container = document.getElementById('dynamicContent');
+            const timestamp = new Date().toLocaleTimeString();
+            
+            const newContent = document.createElement('div');
+            newContent.innerHTML = `
+                <div style="background: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 4px; padding: 10px; margin-top: 10px;">
+                    <strong>Dynamic Content Added at ${timestamp}:</strong><br>
+                    Email: dynamic@test.com<br>
+                    Phone: (999) 888-7777<br>
+                    Credit Card: 4111 1111 1111 1111<br>
+                    SSN: 111-22-3333<br>
+                    Custom text: "dynamic content"
+                </div>
+            `;
+            
+            container.appendChild(newContent);
+        }
+        
+    </script>
+</body>
+</html>

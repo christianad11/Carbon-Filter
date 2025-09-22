@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient48" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M24 3L42 10.5V21C42 31.5 33.5 40.5 24 45C14.5 40.5 6 31.5 6 21V10.5L24 3Z" fill="url(#shieldGradient48)" stroke="#4a5568" stroke-width="1.5"/>
+  <path d="M18 21L22.5 25.5L30 18" stroke="white" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Carbon Filter</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      margin: 0 0 15px 0;
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .main-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+    
+    .status {
+      font-weight: bold;
+      color: #00b894;
+    }
+    
+    .options {
+      display: none;
+    }
+    
+    .options.show {
+      display: block;
+    }
+    
+    .option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    
+    .option label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .option input[type="checkbox"] {
+      transform: scale(1);
+    }
+    
+    .custom-section {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    
+    .custom-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    .custom-input {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .custom-input input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    
+    .custom-input button {
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    .custom-input button:hover {
+      background: #0056b3;
+    }
+    
+    .custom-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      background: #f8f9fa;
+      border-radius: 3px;
+      margin-bottom: 3px;
+      font-size: 12px;
+    }
+    
+    .remove-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 2px 6px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+    
+    .remove-btn:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌿 Carbon Filter</h1>
+  
+  <div class="main-toggle">
+    <input type="checkbox" id="mainToggle" checked>
+    <span class="status" id="status">ON</span>
+  </div>
+  
+    <div class="options" id="options">
+      <div class="option">
+        <label>
+          <input type="checkbox" id="email" checked>
+          📧 Email
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" id="phone" checked>
+          📱 Phone
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" id="creditCard" checked>
+          💳 Credit Card
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          <input type="checkbox" id="ssn" checked>
+          🔐 SSN
+        </label>
+      </div>
+      
+      <div class="custom-section">
+        <div class="custom-header">✏️ Custom Text</div>
+        <div class="custom-input">
+          <input type="text" id="customInput" placeholder="Enter text to hide...">
+          <button id="addCustom">Add</button>
+        </div>
+        <div class="custom-list" id="customList"></div>
+      </div>
+    </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* Privacy mask styles only */
+
+.privacy-mask {
+  background: #ff6b6b;
+  color: transparent;
+  border-radius: 3px;
+  padding: 1px 2px;
+  cursor: help;
+  transition: all 0.2s;
+}
+
+.privacy-mask:hover {
+  background: #ff5252;
+  color: #fff;
+}
+
+.privacy-mask-email {
+  background: #ff6b6b;
+}
+
+.privacy-mask-phone {
+  background: #4ecdc4;
+}
+
+.privacy-mask-creditCard {
+  background: #45b7d1;
+}
+
+.privacy-mask-ssn {
+  background: #96ceb4;
+}
+
+.privacy-mask-custom {
+  background: #6c757d;
+  color: transparent;
+}
+
+.privacy-mask-custom:hover {
+  background: #5a6268;
+  color: #fff;
+}
