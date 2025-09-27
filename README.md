@@ -2,6 +2,8 @@
 
 A Chrome extension that protects your privacy by masking sensitive information on web pages.
 
+![Carbon Filter Demo](demo.gif)
+
 ## Features
 
 - **Toggle Protection** - Enable/disable privacy protection with a simple switch
